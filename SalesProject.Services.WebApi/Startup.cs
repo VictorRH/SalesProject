@@ -59,6 +59,8 @@ namespace SalesProject.Services.WebApi
             services.AddTransient<IProductBrandDomain, ProductBrandDomain>();
             services.AddTransient<IProductBrandApplication, ProductBrandApplication>();
 
+            //Genric repository
+            services.AddScoped(typeof(IGenericRepositories<>), (typeof(GenericRepository<>)));
 
         }
 

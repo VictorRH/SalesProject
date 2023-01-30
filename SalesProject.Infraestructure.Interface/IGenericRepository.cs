@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SalesProject.Infraestructure.Interface
 {
-    public interface IGenericRepository<T1>
+    public interface IGenericRepository<T>
     {
         #region async methods
-        Task<bool> InsertAsync(T1 obj);
-        Task<bool> UpdateAsync(int id, T1 obj);
+        Task<bool> InsertAsync(T obj);
+        Task<bool> UpdateAsync(int id, T obj);
         Task<bool> DeleteAsync(int id);
-        Task<T1> GetByIdAsync(int id);
-        Task<IQueryable<T1>> GetAllAsync();
+        Task<T> GetByIdAsync(int id);
+        Task<T> GetAllAsync();
         #endregion
     }
 }

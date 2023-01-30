@@ -1,11 +1,12 @@
-﻿using System;
+﻿using SalesProject.Domain.Core;
+using System;
 using System.Collections.Generic;
 
 namespace SalesProject.Domain.Entity.Models;
 
-public partial class Cellar
+public partial class Cellar: ClassBase
 {
-    public int Id { get; set; }
+    //public int Id { get; set; }
 
     public string Name { get; set; } = null!;
 
